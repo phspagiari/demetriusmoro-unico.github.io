@@ -2,7 +2,7 @@
 .SILENT: ${MAKECMDGOALS}
 
 image_name=mkdocs-dev
-image_tag=1.0.0
+image_tag=devbuild
 image_url=${image_name}:${image_tag}
 container_name=mkdocs-dev-app
 

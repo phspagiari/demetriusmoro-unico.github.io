@@ -20,15 +20,17 @@ jobs:
       - name: mkdocs-setup
         run: pip install mkdocs-material
       
-      - name: mkdocs-build-deploy
+      - name: mkdocs-pre-build
         run: |
-          cd mkdocs
+          cp mkdocs/nav.yml mkdocs-conf/nav.yml
+          cp -R mkdocs/docs mkdocs-conf/docs/doc/
+          cd mkdocs-conf
           chmod +x pre-build.sh
           ./pre-build.sh
 
       - name: mkdocs-build-deploy
         run: |
-          cd mkdocs
+          cd mkdocs-conf
           mkdocs gh-deploy \
             --ignore-version \
             --strict \

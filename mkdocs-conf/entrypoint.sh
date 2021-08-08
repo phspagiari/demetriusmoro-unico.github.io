@@ -5,9 +5,11 @@ cp /synced/nav.yml nav.yml
 ./pre-build.sh
 
 # creates symlink to synced folder
-ln -s /synced/docs docs
+cd docs
+ln -s /synced/docs doc
 
 # run dev-server on the provided port
+cd ..
 mkdocs \
     serve \
     --dev-addr=0.0.0.0:$PORT

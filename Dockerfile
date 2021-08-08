@@ -1,17 +1,12 @@
 FROM squidfunk/mkdocs-material:7.2.2
 
-# set workdir 
-WORKDIR /mkdocs
-
-# mkdocs base file
-COPY mkdocs/conf.yml .
-COPY mkdocs/pre-build.sh .
-RUN chmod +x pre-build.sh
-
-# entrypoint script
-COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# mkdocs base conf
+RUN mkdir -p /mkdocs
+COPY mkdocs-conf /mkdocs
+RUN chmod +x /mkdocs/pre-build.sh
+RUN chmod +x /mkdocs/entrypoint.sh
 
 # start dev-server on the given port-env
+WORKDIR /mkdocs
 ENTRYPOINT ["/bin/sh"]
-CMD ["/entrypoint.sh"]
+CMD ["/mkdocs/entrypoint.sh"]

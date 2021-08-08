@@ -1,6 +1,6 @@
 site_name: MkDocs multi-repo
 repo_url: https://github.com/demetriusmoro-unico/demetriusmoro-unico.github.io
-edit_uri: "" # disabled - to enable on root repo set as edit/main/demetriusmoro-unico.github.io/docs/
+edit_uri: "" # disabled
 theme:
   name: "material"
   favicon: assets/main/favicon.png
