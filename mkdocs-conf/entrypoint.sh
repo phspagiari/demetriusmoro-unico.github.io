@@ -6,7 +6,7 @@ cp /synced/nav.yml nav.yml
 
 # creates symlink to synced folder
 cd docs
-ln -s /synced/docs doc
+ln -s /synced/doc doc
 
 # run dev-server on the provided port
 cd ..
