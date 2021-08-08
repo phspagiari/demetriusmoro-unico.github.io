@@ -1,7 +1,10 @@
+name: registry-push
+
 on:
   workflow_dispatch:
   push:
     branches: [main]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,6 +15,14 @@ jobs:
       IMAGE_TAG: 1.0.0
 
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          docker push $REGISTRY/$OWNER/$IMAGE_NAME:$IMAGE_TAG
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: envs
+        run: |
+          echo "IMAGE_URL=$REGISTRY/$OWNER/$IMAGE_NAME:$IMAGE_TAG" >> $GITHUB_ENV
+
+      - name: mkdocs-build-deploy
+        run: |
+          docker build -t $IMAGE_URL
+          docker push $IMAGE_URL
