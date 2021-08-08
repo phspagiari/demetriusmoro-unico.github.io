@@ -16,12 +16,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-
+      
       - name: envs
         run: |
           echo "IMAGE_URL=$REGISTRY/$OWNER/$IMAGE_NAME:$IMAGE_TAG" >> $GITHUB_ENV
 
-      - name: mkdocs-build-deploy
-        run: |
-          docker build -t $IMAGE_URL .
-          docker push $IMAGE_URL
+      - name: docker-build-push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: $IMAGE_URL
+          secrets: GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
