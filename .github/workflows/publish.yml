@@ -16,7 +16,6 @@ jobs:
           cd mkdocs
           mkdocs \
             gh-deploy \
-            --force \
             --ignore-version \
             --strict \
-            --verbose
+            --force
