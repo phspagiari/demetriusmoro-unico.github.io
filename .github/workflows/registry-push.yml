@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REGISTRY: ghcr.io
-      OWNER: acesso-io
+      OWNER: demetriusmoro-unico
       IMAGE_NAME: poc-mkdocs-dev
       IMAGE_TAG: 1.0.0
 
