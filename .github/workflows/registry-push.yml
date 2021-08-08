@@ -1,7 +1,6 @@
 name: registry-push
 
 on:
-  workflow_dispatch:
   push:
     branches: [main]
 
@@ -9,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      REGISTRY: https://ghcr.io
+      REGISTRY: ghcr.io
       OWNER: acesso-io
       IMAGE_NAME: poc-mkdocs-dev
       IMAGE_TAG: 1.0.0
