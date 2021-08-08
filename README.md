@@ -1,2 +1,3 @@
-# demetriusmoro-unico.github.io
-multi-repo mkdocs with gh pages
+# MkDocs multi-repo
+
+POC using multi-repo MkDocs and GitHub Pages.
