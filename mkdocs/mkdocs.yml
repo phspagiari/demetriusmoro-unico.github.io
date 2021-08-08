@@ -25,7 +25,7 @@ theme:
         icon: material/toggle-switch
         name: Ativar modo claro
 nav:
-  - Início: inicio.md
+  - Início: index.md
   - Cheat sheet: cheat-sheet.md
 
 markdown_extensions:
