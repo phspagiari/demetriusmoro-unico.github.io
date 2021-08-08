@@ -22,8 +22,9 @@ run:
 		--name ${container_name} \
 		--env PORT=${container_port} \
 		-p ${localhost_port}:${container_port} \
-		-v ${PWD}/mkdocs:/docs \
-		${image_url}
+		-v ${PWD}/mkdocs:/synced \
+		${image_url} \
+		|| true
 	
 	make clean
 

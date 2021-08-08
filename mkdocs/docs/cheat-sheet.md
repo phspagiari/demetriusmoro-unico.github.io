@@ -4,6 +4,16 @@ Escrever [markdown](https://pt.wikipedia.org/wiki/Markdown) é muito simples, ve
 
 ---
 
+## Links
+
+```markdown
+[Isso é um link](https://pt.wikipedia.org/wiki/Markdown)
+```
+
+[Isso é um link](https://pt.wikipedia.org/wiki/Markdown)
+
+---
+
 ## Ênfase
 
 ```markdown

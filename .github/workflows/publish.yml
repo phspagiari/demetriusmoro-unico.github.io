@@ -19,6 +19,11 @@ jobs:
 
       - name: mkdocs-setup
         run: pip install mkdocs-material
+      
+      - name: mkdocs-build-deploy
+        run: |
+          cd mkdocs
+          ./pre-build.sh
 
       - name: mkdocs-build-deploy
         run: |

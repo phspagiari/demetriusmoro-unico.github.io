@@ -24,9 +24,6 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Ativar modo claro
-nav:
-  - Início: index.md
-  - Cheat sheet: cheat-sheet.md
 
 markdown_extensions:
   - pymdownx.keys
