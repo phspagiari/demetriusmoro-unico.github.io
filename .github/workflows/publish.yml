@@ -23,6 +23,7 @@ jobs:
       - name: mkdocs-build-deploy
         run: |
           cd mkdocs
+          chmod +x pre-build.sh
           ./pre-build.sh
 
       - name: mkdocs-build-deploy
