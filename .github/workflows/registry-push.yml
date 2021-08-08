@@ -25,5 +25,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: $IMAGE_URL
+          tags: ${{ env.$IMAGE_URL }}
           secrets: GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
