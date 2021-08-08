@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      REGISTRY: https://ghcr.io
+      OWNER: acesso-io
+      IMAGE_NAME: poc-mkdocs-dev
+      IMAGE_TAG: 1.0.0
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          docker push $REGISTRY/$OWNER/$IMAGE_NAME:$IMAGE_TAG
