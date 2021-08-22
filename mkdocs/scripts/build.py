@@ -77,12 +77,12 @@ def update_nav_tree(nav_item):
             nav_item[k] = update_nav_tree(nav_item[k])
         return nav_item
 
-    if isinstance(nav_item, str) and nav_item.lower().endswith('.git'):
-        return (
-            expand_repo(nav_item)
-            if fetch_dependencies
-            else REPO_NOT_AVAILLABLE_MD
-        )
+    if (
+        fetch_dependencies and
+        isinstance(nav_item, str) and
+        nav_item.lower().endswith('.git')
+    ):
+        return expand_repo(nav_item)
 
     return nav_item
 
@@ -148,9 +148,7 @@ def del_temp_files():
 
     if not fetch_dependencies:
         return
-
     shutil.rmtree(TEMP_PATH)
-    os.remove(f'{BASE_PATH}/docs/{REPO_NOT_AVAILLABLE_MD}')
 
 
 if __name__ == '__main__':
