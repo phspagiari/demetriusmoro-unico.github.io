@@ -3,6 +3,8 @@ name: publish
 on:
   push:
     branches: [main]
+  repository_dispatch:
+    types: [childrepo-event]
 
 jobs:
   deploy:
