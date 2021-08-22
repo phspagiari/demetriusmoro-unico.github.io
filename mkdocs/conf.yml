@@ -1,6 +1,6 @@
 site_name: MkDocs multi-repo
 repo_url: https://github.com/demetriusmoro-unico/demetriusmoro-unico.github.io
-edit_uri: "" # disabled
+edit_uri: "javascript:edit_url(); //"
 theme:
   name: "material"
   favicon: assets/main/favicon.png
@@ -24,6 +24,8 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Ativar modo claro
+extra_javascript:
+  - javascripts/edit_url.js
 
 markdown_extensions:
   - pymdownx.keys
