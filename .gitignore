@@ -1,0 +1,6 @@
+# external repo clones
+/mkdocs/docs/temp/
+/mkdocs/docs/doc/
+
+# test files
+/mkdocs/mkdocs.yml
