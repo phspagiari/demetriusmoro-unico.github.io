@@ -1,11 +1,14 @@
 #/bin/sh
 
-# run pre-build script
-cp /synced/nav.yml nav.yml
-./pre-build.sh
+# run build script
+cd /
+cp /synced/nav.yml /mkdocs/nav.yml
+sh /mkdocs/scripts/build.sh
 
 # creates symlink to synced folder
-cd docs
+cd /mkdocs/docs
+rm *.md
+rm -rf doc
 ln -s /synced/doc doc
 
 # run dev-server on the provided port

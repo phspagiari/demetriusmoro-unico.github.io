@@ -1,3 +1,7 @@
 nav:
-  - Início: doc/inicio.md
-  - Cheat sheet: doc/cheat-sheet.md
+  - Início: index.md
+  - Demo Repo 1: https://github.com/demetriusmoro-unico/mkdocs-demo-1.git
+  - Demo Group:
+    - SubItem Repo 2: https://github.com/demetriusmoro-unico/mkdocs-demo-2.git
+    - SubItem Repo 3: https://github.com/demetriusmoro-unico/mkdocs-demo-3.git
+  - Cheat sheet: cheat-sheet.md

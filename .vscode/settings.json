@@ -4,5 +4,13 @@
         "MD007": {
             "indent": 4
         }
-    }
+    },
+    
+    "python.linting.pylintEnabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintCategorySeverity.convention": "Error",
+    "python.linting.pylintCategorySeverity.error": "Error",
+    "python.linting.pylintCategorySeverity.fatal": "Error",
+    "python.linting.pylintCategorySeverity.refactor": "Error",
+    "python.linting.pylintCategorySeverity.warning": "Error"
 }
