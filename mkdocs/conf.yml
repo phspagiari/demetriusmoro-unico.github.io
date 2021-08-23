@@ -3,6 +3,9 @@ repo_url: https://github.com/demetriusmoro-unico/demetriusmoro-unico.github.io
 edit_uri: "javascript:edit_url(); //"
 theme:
   name: "material"
+  custom_dir: overrides
+  features:
+    - navigation.instant
   favicon: assets/main/favicon.png
   logo: assets/main/logo.png
   locale: pt
@@ -26,7 +29,6 @@ theme:
         name: Ativar modo claro
 extra_javascript:
   - javascripts/edit_url.js
-
 markdown_extensions:
   - pymdownx.keys
   - pymdownx.tilde
